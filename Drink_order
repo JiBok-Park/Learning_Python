@@ -1,0 +1,16 @@
+def menu(name, drink, cups):
+  if drink == "coffee":
+    print(f"Hello {name}, your order is {drink} * {cups}, total price is {cups * 3000}")
+  elif drink == "latte":
+    print(f"Hello {name}, your order is {drink} * {cups}, total price is {cups * 4000}")
+  elif drink == "juice":
+    print(f"Hello {name}, your order is {drink} * {cups}, total price is {cups * 5000}")
+  
+name = input("What's your name?")
+drink = input("What drink do you want? We have coffee, latte, and juice. Please write down a drink to order!")
+
+if drink != "coffee" and drink != "latte" and drink != "juice":
+  print("We don't have that drink")
+else:
+  cups = int(input("How many cups?"))
+  menu(name, drink, cups)
