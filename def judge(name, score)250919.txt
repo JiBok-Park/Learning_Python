@@ -1,0 +1,25 @@
+def judge(name, score):
+  if score >= 90:
+    print(f"Hello {name}, your grade is A")
+  elif score >= 80:
+    print(f"Hello {name}, your grade is B")
+  elif score >= 70:
+    print(f"Hello {name}, your grade is C")
+  else:
+    print(f"Hello {name}, your grade is F")
+
+name = input("What is your name?")
+
+score_input = False
+
+while not score_input:
+  try:
+    score = int(input("What is your score?"))
+    if 0 <= score <= 100:
+      score_input = True
+      judge(name, score)
+    else:
+      print("Score must be number an integer 0 and 100 Try again!")
+      
+  except ValueError:
+    print("Score must be a non-negative integer! 0 and 100 haha")

@@ -1,0 +1,18 @@
+from random import randint
+
+user_choice = int(input("Choose your numer"))
+
+pc_choice = randint(1, 50)
+
+if user_choice == pc_choice:
+  print("you won")
+elif user_choice > pc_choice:
+  print("lower! computer chose", pc_choice)
+elif user_choice < pc_choice:
+  print("higher! computer chose", pc_choice)
+
+distance = 0
+
+while distance < 20:
+  print("you run", distance,"km")
+  distance = distance + 1
