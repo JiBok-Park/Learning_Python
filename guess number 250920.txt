@@ -1,0 +1,22 @@
+from random import randint
+
+N = int(input("Max_number"))
+
+secret = randint(1, N)
+
+low = 1
+high = N
+count = 0
+
+while low <= high:
+  guess = (low + high) // 2
+  count += 1
+  
+  if secret == guess:
+    break
+    
+  elif secret > guess:
+    low = guess + 1
+    
+  else:
+    high = guess - 1
