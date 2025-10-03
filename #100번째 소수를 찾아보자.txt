@@ -1,0 +1,27 @@
+#100번째 소수를 찾아보자
+
+import math
+
+def is_prime(n):
+  if n < 2:
+    return False
+  elif n == 2:
+    return True
+  elif n % 2 == 0:
+    return False
+
+  for i in range(3, math.isqrt(n) + 1, 2):
+    if n % i == 0:
+      return False
+      
+  return True
+
+
+prime = []
+num = 2
+while len(prime) < 100:
+  if is_prime(num):
+    prime.append(num)
+  num += 1
+  
+print(prime[-1])
